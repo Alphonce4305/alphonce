@@ -1,0 +1,30 @@
+
+
+RewriteEngine on 
+RewriteRule ^Start index.php [L]
+RewriteRule ^welcome welcome.php [L]
+RewriteRule ^Students Students.php [L]
+RewriteRule ^Student Student.php [L]
+RewriteRule ^Exams Exams.php [L]
+RewriteRule ^reports reports.php [L]
+RewriteRule ^Results Results.php [L]
+RewriteRule ^Staff staff.php [L]
+RewriteRule ^Members Members.php [L]
+RewriteRule ^Classes Classes.php [L]
+RewriteRule ^Marks Marks.php [L]
+RewriteRule ^SHEET SHEET.php [L]
+RewriteRule ^Team Team.php [L]
+RewriteRule ^Papers papers.php [L]
+
+#NC - Non Case Insensitive
+#L - Last rule to be used
+
+#Make sure that it is not in the directory
+#RewriteCond %{REQUEST_FILENAME} !-d  # if requested url is directory (-d)
+
+#RewriteCond %{REQUEST_FILENAME}\.php !-f # and if there is not a file (!-f)
+
+#RewriteRule ^(.*)$ index.php [NC,L] # foldername/foldername.php
+#RewriteRule ^([A-Za-z0-9-]+)/?$ $1/$1.php [NC,L] # foldername/foldername.php
+#RewriteRule ^(.*)$ $1.php [NC,L]
+#IndexIgnore *.php
